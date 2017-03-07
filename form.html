@@ -52,57 +52,57 @@
 
             <fieldset class="feedback-form__name">
               <legend class="feedback-form__title">Представьтесь:</legend>
-              <label class="feedback-form__first-name" for="first-name">Имя*:</label>
-              <input id="first-name" type="text" name="first-name" value="" required>
-              <label class="feedback-form__last-name" for="last-name">Фамилия*:</label>
-              <input id="last-name" type="text" name="last-name" value="" required>
-              <label class="feedback-form__patronymic-name" for="patronymic-name">Отчество:</label>
-              <input id="patronymic-name" type="text" name="patronymic-name" value="">
+              <label class="first-name-label" for="first-name">Имя*:</label>
+              <input class="first-name-input" id="first-name" type="text" name="first-name" value="" required>
+              <label class="last-name-label" for="last-name">Фамилия*:</label>
+              <input class="last-name-input" id="last-name" type="text" name="last-name" value="" required>
+              <label class="patronymic-name-label" for="patronymic-name">Отчество:</label>
+              <input class="patronymic-name-input" id="patronymic-name" type="text" name="patronymic-name" value="">
 
             </fieldset>
 
             <fieldset class="feedback-form__contacts">
               <legend class="feedback-form__title">Контактная информация:</legend>
-              <label class="feedback-form__phone" for="phone">Контактный телефон*:</label>
-              <input id="phone" type="tel" name="phone" value="" required>
-              <label class="feedback-form__email" for="email">Электронная почта*:</label>
-              <input id="email" type="email" name="email" value="" required>
+              <label class="phone-label" for="phone">Контактный телефон*:</label>
+              <input class="phone-input" id="phone" type="tel" name="phone" value="" required>
+              <label class="email-label" for="email">Электронная почта*:</label>
+              <input class="email-input" id="email" type="email" name="email" value="" required>
 
             </fieldset>
 
             <fieldset class="feedback-form__radio">
               <legend class="feedback-form__title">Ваше общее впечатление:</legend>
 
-              <input class="feedback-form__radio-input" id="radio-good" type="radio" name="impression" checked>
-              <label class="feedback-form__impression" for="radio-good">Скорее положительное</label>
+              <input class="radio-input" id="radio-good" type="radio" name="impression" checked>
+              <label class="radio-label" for="radio-good">Скорее положительное</label>
 
-              <input class="feedback-form__radio-input" id="radio-bad" type="radio" name="impression">
-              <label class="feedback-form__impression" for="radio-bad">Скорее отрицательное</label>
+              <input class="radio-input" id="radio-bad" type="radio" name="impression">
+              <label class="radio-label" for="radio-bad">Скорее отрицательное</label>
 
-              <input class="feedback-form__radio-input" id="radio-undecided" type="radio" name="impression">
-              <label class="feedback-form__impression" for="radio-undecided">Затрудняюсь ответить</label>
+              <input class="radio-input" id="radio-undecided" type="radio" name="impression">
+              <label class="radio-label" for="radio-undecided">Затрудняюсь ответить</label>
             </fieldset>
 
             <fieldset class="feedback-form__checkbox">
               <legend class="feedback-form__title">Посещённые достопримечательности:</legend>
 
-              <input class="feedback-form__checkbox-input" id="devil-bridge" type="checkbox" name="devil-bridge" checked>
-              <label class="feedback-form__sight" for="devil-bridge">Мост Дьявола</label>
+              <input class="checkbox-input" id="devil-bridge" type="checkbox" name="devil-bridge" checked>
+              <label class="checkbox-label" for="devil-bridge">Мост Дьявола</label>
 
-              <input class="feedback-form__checkbox-input" id="slide-park" type="checkbox" name="slide-park" checked>
-              <label class="feedback-form__sight" for="slide-park">Слайд-парк</label>
+              <input class="checkbox-input" id="slide-park" type="checkbox" name="slide-park" checked>
+              <label class="checkbox-label" for="slide-park">Слайд-парк</label>
 
-              <input class="feedback-form__checkbox-input" id="bell-mtn" type="checkbox" name="bell-mtn">
-              <label class="feedback-form__sight" for="bell-mtn">Гора-Колокол</label>
+              <input class="checkbox-input" id="bell-mtn" type="checkbox" name="bell-mtn">
+              <label class="checkbox-label" for="bell-mtn">Гора-Колокол</label>
 
-              <input class="feedback-form__checkbox-input" id="red-rocks" type="checkbox" name="red-rocks" checked>
-              <label class="feedback-form__sight" for="red-rocks">Красные скалы</label>
+              <input class="checkbox-input" id="red-rocks" type="checkbox" name="red-rocks" checked>
+              <label class="checkbox-label" for="red-rocks">Красные скалы</label>
             </fieldset>
 
             <fieldset>
               <legend class="feedback-form__title">Опишите свои эмоции:</legend>
-              <textarea class="feedback-form__textarea-input" id="feedback-input-text" rows="10" cols="50" name="input-text" required></textarea>
-              <label class="feedback-form__input-text" for="feedback-input-text">Опишите подробно все свои восторги</label>
+              <textarea class="textarea-input" id="feedback-input-text" rows="10" cols="50" name="input-text" required></textarea>
+              <label class="textarea-label" for="feedback-input-text">Опишите подробно все свои восторги</label>
             </fieldset>
 
             <input class="btn-submit" type="submit" name="feedback-submit" value="Отправить отзыв">
