@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <title>HTML Academy: Седона</title>
+  </head>
+  <body>
+
+    <header class="page-header">
+
+      <nav class="main-nav main-nav--closed">
+        <div class="main-nav__wrapper">
+          <ul class="main-nav__items">
+
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="index.html">Главная</a>
+            </li>
+
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="photo.html">Фото и видео</a>
+            </li>
+
+            <li class="main-nav__item main-nav__item--active">
+              <a class="main-nav__link main-nav__link--active">Форма отзыва</a>
+            </li>
+
+            <li class="main-nav__item">
+              <a class="main-nav__link" href="https://htmlacademy.ru/">HTML academy</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="page-header__logo">
+          <img src="http://placehold.it/102x83" alt="Sedona Logo" width="102" height="83">
+        </div>
+
+        <button class="main-nav__toggle" type="button">Показать меню</button>
+
+      </nav>
+    </header>
+
+    <main class="main-content">
+      <div class="main-content__wrapper">
+
+        <section class="page-title">
+          <h1 class="page-title__heading">Оставьте свой отзыв</h1>
+          <p class="page-title__caption">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещённых вами достопримечательностях</p>
+        </section>
+
+        <section class="feedback">
+          <form id="feedback-form" class="feedback-form" action="https://echo.htmlacademy.ru/">
+
+            <fieldset class="feedback-form__name">
+              <legend class="feedback-form__title">Представьтесь:</legend>
+              <div class="feedback-flexbox-name">  <!--For correct flexbox layout-->
+
+                <div class="feedback-item">
+                  <input id="first-name" class="feedback-item__first-name-input" type="text" name="first-name" value="" required>
+                  <label for="first-name" class="feedback-item__first-name-label">Имя*:</label>
+                </div>
+
+                <div class="feedback-item">
+                  <input id="last-name" class="feedback-item__last-name-input" type="text" name="last-name" value="" required>
+                  <label for="last-name" class="feedback-item__last-name-label">Фамилия*:</label>
+                </div>
+
+                <div class="feedback-item">
+                  <input id="patronymic-name" class="feedback-item__patronymic-name-input" type="text" name="patronymic-name" value="">
+                  <label for="patronymic-name" class="feedback-item__patronymic-name-label">Отчество:</label>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="feedback-form__contacts">
+              <legend class="feedback-form__title">Контактная информация:</legend>
+              <div class="feedback-flexbox-contacts">
+
+                <div class="feedback-item">
+                  <input id="phone" class="feedback-item__phone-input" type="tel" name="phone" value="" required>
+                  <label for="phone" class="feedback-item__phone-label">Контактный телефон*:</label>
+                </div>
+
+                <div class="feedback-item">
+                  <input id="email" class="feedback-item__email-input" type="email" name="email" value="" required>
+                  <label for="email" class="feedback-item__email-label">Электронная почта*:</label>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="feedback-form__radio">
+              <legend class="feedback-form__title">Ваше общее впечатление:</legend>
+              <div class="feedback-flexbox-radio">
+
+                <div class="feedback-item">
+                  <input id="radio-good" class="feedback-item__radio-input" type="radio" name="impression" checked>
+                  <label for="radio-good" class="feedback-item__radio-label">Скорее положительное</label>
+                </div>
+
+                <div class="feedback-item">
+                  <input id="radio-bad" class="feedback-item__radio-input" type="radio" name="impression">
+                  <label for="radio-bad" class="feedback-item__radio-label">Скорее отрицательное</label>
+                </div>
+
+                <div class="feedback-item">
+                  <input id="radio-undecided" class="feedback-item__radio-input" type="radio" name="impression">
+                  <label for="radio-undecided" class="feedback-item__radio-label">Затрудняюсь ответить</label>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="feedback-form__checkbox">
+              <legend class="feedback-form__title">Посещённые достопримечательности:</legend>
+              <div class="feedback-flexbox-checkbox">
+
+                <div class="feedback-item">
+                  <input id="devil-bridge" class="feedback-item__checkbox-input" type="checkbox" name="devil-bridge" checked>
+                  <label for="devil-bridge" class="feedback-item__checkbox-label">Мост Дьявола</label>
+                </div>
+
+                <div class="feedback-item">
+                  <input id="slide-park" class="feedback-item__checkbox-input" type="checkbox" name="slide-park" checked>
+                  <label for="slide-park" class="feedback-item__checkbox-label">Слайд-парк</label>
+                </div>
+
+                <div class="feedback-item">
+                  <input id="bell-mtn" class="feedback-item__checkbox-input" type="checkbox" name="bell-mtn">
+                  <label for="bell-mtn" class="feedback-item__checkbox-label">Гора-Колокол</label>
+                </div>
+
+                <div class="feedback-item">
+                  <input id="red-rocks" class="feedback-item__checkbox-input" type="checkbox" name="red-rocks" checked>
+                  <label for="red-rocks" class="feedback-item__checkbox-label">Красные скалы</label>
+                </div>
+              </div>
+            </fieldset>
+
+            <fieldset class="feedback-form__textarea">
+              <legend class="feedback-form__title">Опишите свои эмоции:</legend>
+              <div class="feedback-flexbox-textarea">
+                <div class="feedback-item">
+                  <textarea id="feedback-input-text" class="feedback-item__textarea-input" rows="10" cols="50" name="input-text" required></textarea>
+                  <label for="feedback-input-text" class="feedback-item__textarea-label">Опишите подробно все свои восторги</label>
+                </div>
+              </div>
+            </fieldset>
+
+            <input class="btn-submit" type="submit" name="feedback-submit" value="Отправить отзыв">
+
+          </form>
+
+          <section class="form-error">
+            <h2 class="form-error__title">Что-то пошло не так!</h2>
+            <p class="form-error__info">Проверьте поля, выделенные красным, скорее всего, вы забыли их заполнить</p>
+            <button class="btn-close" type="button">OK</button>
+          </section>
+
+          <section class="form-onsubmit">
+            <h2 class="form-onsubmit__title">Ваш отзыв отправлен!</h2>
+            <p class="form-onsubmit__info">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
+            <button class="btn-close" type="button">Закрыть окно</button>
+          </section>
+        </section>
+      </div>
+    </main>
+
+    <footer class="page-footer">
+      <div class="page-footer__wrapper">
+
+        <span class="page-footer__hashtag">#visitsedona</span>
+
+        <div class="page-footer__social">
+          <a class="social-btn social-btn--tw" href="#"></a>
+          <a class="social-btn social-btn--fb" href="#"></a>
+          <a class="social-btn social-btn--yt" href="#"></a>
+        </div>
+
+        <a class="page-footer__copyright" href="https://htmlacademy.ru/">Разработано</a>
+
+      </div>
+    </footer>
+  </body>
+</html>
