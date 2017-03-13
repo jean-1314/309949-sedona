@@ -43,6 +43,10 @@
     <main class="main-content">
       <div class="main-content__wrapper">
 
+        <div class="main-image">
+          <img class="main-image__caption" src="http://placehold.it/280x214" alt="Sedona Caption" width="280" height="214">
+        </div>
+
         <section class="page-title">
           <h1 class="page-title__heading">Оставьте свой отзыв</h1>
           <p class="page-title__caption">Помогите нашим отелям стать лучше! Оставьте отзыв о них, а также о посещённых вами достопримечательностях</p>
@@ -56,18 +60,18 @@
               <div class="feedback-flexbox-name">  <!--For correct flexbox layout-->
 
                 <div class="feedback-item">
-                  <input id="first-name" class="feedback-item__first-name-input" type="text" name="first-name" value="" required>
-                  <label for="first-name" class="feedback-item__first-name-label">Имя*:</label>
+                  <input id="first-name" class="feedback-item__input" type="text" name="first-name" value="" required>
+                  <label for="first-name" class="feedback-item__label">Имя*:</label>
                 </div>
 
                 <div class="feedback-item">
-                  <input id="last-name" class="feedback-item__last-name-input" type="text" name="last-name" value="" required>
-                  <label for="last-name" class="feedback-item__last-name-label">Фамилия*:</label>
+                  <input id="last-name" class="feedback-item__input" type="text" name="last-name" value="" required>
+                  <label for="last-name" class="feedback-item__label">Фамилия*:</label>
                 </div>
 
                 <div class="feedback-item">
-                  <input id="patronymic-name" class="feedback-item__patronymic-name-input" type="text" name="patronymic-name" value="">
-                  <label for="patronymic-name" class="feedback-item__patronymic-name-label">Отчество:</label>
+                  <input id="patronymic-name" class="feedback-item__input" type="text" name="patronymic-name" value="">
+                  <label for="patronymic-name" class="feedback-item__label">Отчество:</label>
                 </div>
               </div>
             </fieldset>
@@ -77,13 +81,13 @@
               <div class="feedback-flexbox-contacts">
 
                 <div class="feedback-item">
-                  <input id="phone" class="feedback-item__phone-input" type="tel" name="phone" value="" required>
-                  <label for="phone" class="feedback-item__phone-label">Контактный телефон*:</label>
+                  <input id="phone" class="feedback-item__input" type="tel" name="phone" value="" required>
+                  <label for="phone" class="feedback-item__label">Контактный телефон*:</label>
                 </div>
 
                 <div class="feedback-item">
-                  <input id="email" class="feedback-item__email-input" type="email" name="email" value="" required>
-                  <label for="email" class="feedback-item__email-label">Электронная почта*:</label>
+                  <input id="email" class="feedback-item__input" type="email" name="email" value="" required>
+                  <label for="email" class="feedback-item__label">Электронная почта*:</label>
                 </div>
               </div>
             </fieldset>
@@ -146,7 +150,7 @@
             </fieldset>
 
             <div class="feedback-item">
-              <input class="btn-submit" type="submit" name="feedback-submit" value="Отправить отзыв">
+              <input class="btn btn-submit" type="submit" name="feedback-submit" value="Отправить отзыв">
             </div>
 
           </form>
@@ -154,13 +158,13 @@
           <section class="form-error">
             <h2 class="form-error__title">Что-то пошло не так!</h2>
             <p class="form-error__info">Проверьте поля, выделенные красным, скорее всего, вы забыли их заполнить</p>
-            <button class="btn-close" type="button">OK</button>
+            <button class="btn btn-close" type="button">OK</button>
           </section>
 
           <section class="form-onsubmit">
             <h2 class="form-onsubmit__title">Ваш отзыв отправлен!</h2>
             <p class="form-onsubmit__info">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-            <button class="btn-close" type="button">Закрыть окно</button>
+            <button class="btn btn-close" type="button">Закрыть окно</button>
           </section>
         </section>
       </div>
