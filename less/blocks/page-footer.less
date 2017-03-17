@@ -1,6 +1,7 @@
 .page-footer {
+  .flex-column-center();
   text-transform: uppercase;
-  background-color: @bg-white;
+  text-align: center;
 }
 
 .page-footer__hashtag {
@@ -18,4 +19,24 @@
   padding-top: 40px;
   padding-bottom: 30px;
   .font-regular-grey();
+  text-decoration: none;
+}
+
+.page-footer__wrapper {
+  .container();
+  background-color: @bg-white;
+}
+
+@media @tablet-width {
+  .page-footer__wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  .page-footer__hashtag,
+  .page-footer__social,
+  .page-footer__copyright {
+    width: 150px;
+  }
 }

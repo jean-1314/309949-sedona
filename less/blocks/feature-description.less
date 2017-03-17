@@ -1,4 +1,5 @@
 .feature-description {
+  .flex-column-center();
   color: #ffffff;
   text-transform: uppercase;
 }
@@ -21,8 +22,10 @@
 }
 
 .feature-description__caption {
+  width: 250px;
   margin: 0;
   padding-bottom: 30px;
+  text-align: center;
 }
 
 .feature-description--rest {
@@ -31,4 +34,24 @@
 
 .feature-description__number--rest {
   color: #333333;
+}
+
+@media @tablet-width {
+
+  .feature-description {
+    display: flex;
+    justify-content: center;
+    width: 256px;
+  }
+
+  .feature-description__title,
+  .feature-description__number,
+  .feature-description__caption {
+    width: 175px;
+    text-align: center;
+  }
+
+  .feature-description__title--rest {
+    width: 125px;
+  }
 }

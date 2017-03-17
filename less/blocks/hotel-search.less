@@ -1,6 +1,10 @@
 .hotel-search {
+  .flex-column-center();
+  margin-left: 20px;
+  margin-right: 20px;
   background-color: @bg-white;
   text-transform: uppercase;
+  text-align: center;
 }
 
 .hotel-search__heading {
@@ -25,4 +29,16 @@
   display: block;
   margin-bottom: 49px;
   font-size: 21px;
+}
+
+@media @tablet-width {
+
+  .hotel-search__heading {
+    padding-top: 55px;
+    font-size: 30px;
+  }
+
+  .hotel-search__caption {
+    width: 450px;
+  }
 }
