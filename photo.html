@@ -42,26 +42,28 @@
       </nav>
     </header>
 
-    <main class="main-content">
-      <div class="main-content__wrapper">
-        <div class="main-image">
-          <img class="main-image__caption" src="http://placehold.it/280x214" alt="Sedona Caption" width="280" height="214">
+    <main class="main-content main-content--rest">
+      <div class="main-content__wrapper main-content__wrapper--rest">
+        <div class="main-image main-image--rest">
+          <img class="main-image__caption main-image__caption--rest" src="http://placehold.it/280x214" alt="Sedona Caption" width="280" height="214">
         </div>
 
         <section class="page-title">
-          <h1 class="page-title__heading">Фото и видео</h1>
-          <p class="page-title__caption">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+          <h1 class="page-title__heading page-title__heading--rest">Фото и видео</h1>
+          <p class="page-title__caption">Не&nbsp;можете&nbsp;решиться&nbsp;на&nbsp;путешествие из-за курса? Фотографии&nbsp;помогут вам&nbsp;забыть&nbsp;о&nbsp;политике&nbsp;и&nbsp;экономике.</p>
         </section>
 
         <section class="media">
 
           <article class="photo">
-            <figure class="photo__item">
+            <figure class="photo__item photo__item--first">
               <img src="http://placehold.it/280x280" alt="Road near Sedona" width="280" height="280">
               <figcaption class="photo__caption">Неродные просторы</figcaption>
             </figure>
-            <span class="photo__author">Автор фото: Борис</span>
-            <span class="photo__likes">1350</span>
+            <div class="photo__label">
+              <span class="photo__author">Автор фото: Борис</span>
+              <span class="photo__likes">1350</span>
+            </div>
           </article>
 
           <article class="photo">
@@ -69,8 +71,10 @@
               <img src="http://placehold.it/280x280" alt="Sedona flora" width="280" height="280">
               <figcaption class="photo__caption">Местная растительность</figcaption>
             </figure>
-            <span class="photo__author">Автор фото: Сергей</span>
-            <span class="photo__likes">143</span>
+            <div class="photo__label">
+              <span class="photo__author">Автор фото: Сергей</span>
+              <span class="photo__likes">143</span>
+            </div>
           </article>
 
           <article class="photo">
@@ -78,23 +82,27 @@
               <img src="http://placehold.it/280x280" alt="Sedona road heads to the north" width="280" height="280">
               <figcaption class="photo__caption">Дорога на север</figcaption>
             </figure>
-            <span class="photo__author">Автор фото: Пётр</span>
-            <span class="photo__likes">96</span>
+            <div class="photo__label">
+              <span class="photo__author">Автор фото: Пётр</span>
+              <span class="photo__likes">96</span>
+            </div>
           </article>
 
-          <article class="photo">
+          <article class="photo photo--last">
             <figure class="photo__item">
               <img src="http://placehold.it/280x280" alt="Sedona Devil's Bridge" width="280" height="280">
               <figcaption class="photo__caption">Мост Дьявола</figcaption>
             </figure>
-            <span class="photo__author">Автор фото: Антон</span>
-            <span class="photo__likes">254</span>
+            <div class="photo__label">
+              <span class="photo__author">Автор фото: Антон</span>
+              <span class="photo__likes">254</span>
+            </div>
           </article>
 
           <article class="video">
             <strong class="video__heading">Всё ещё сомневаетесь?</strong>
             <figure class="video__item">
-              <figcaption>Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</figcaption>
+              <figcaption>Смотрите видеопрезентацию и скорее&nbsp;за&nbsp;билетами, пока они не подорожали в очередной раз!</figcaption>
               <!--<video controls width="320" height="200" src="#"></video>-->
               <img src="http://placehold.it/320x200" alt="Road in Sedona" width="320" height="200">
             </figure>
@@ -105,8 +113,9 @@
                 <div class="video-controls__slider-box"></div>
               </div>
 
+              <div class="video-controls__refresh"></div>
+
               <div class="video-controls__bottom">
-                <div class="video-controls__refresh"></div>
                 <div class="video-controls__quality"></div>
                 <div class="video-controls__size"></div>
               </div>
