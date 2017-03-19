@@ -1,5 +1,16 @@
 .feedback-item__label {
+  align-self: center;
+  flex-grow: 2;
+  margin-bottom: 20px;
   .font-regular-grey();
+}
+
+.feedback-item__input {
+  flex-grow: 1;
+  margin-bottom: 20px;
+  height: 58px;
+  border: 0;
+  background-color: @bg-body;
 }
 
 .feedback-item__radio-label,
@@ -7,4 +18,53 @@
 .feedback-item__textarea-label {
   .font-title();
   color: #000000;
+}
+
+.feedback-item__radio-input,
+.feedback-item__checkbox-input {
+  .visually-hidden();
+}
+
+.feedback-item__radio-label,
+.feedback-item__checkbox-label {
+  padding-left: 80px;
+}
+
+.feedback-item__textarea-input {
+  border: 0;
+  background-color: @bg-body;
+}
+
+.feedback-item__textarea-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 20px;
+  padding-top: 15px;
+  cursor: text;
+}
+
+.feedback-item--name {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 280px;
+}
+
+.feedback-item--contacts .feedback-item__input {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.feedback-item--contacts .feedback-item__label {
+  padding-left: 22px;
+}
+
+.feedback-item--radio,
+.feedback-item--checkbox {
+  margin-bottom: 35px;
+}
+
+.feedback-item--textarea {
+  position: relative;
 }
