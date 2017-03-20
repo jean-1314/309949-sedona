@@ -1,5 +1,16 @@
 .feedback-item__label {
+  align-self: center;
+  flex-grow: 2;
+  margin-bottom: 20px;
   .font-regular-grey();
+}
+
+.feedback-item__input {
+  flex-grow: 1;
+  margin-bottom: 20px;
+  height: 58px;
+  border: 0;
+  background-color: @bg-body;
 }
 
 .feedback-item__radio-label,
@@ -7,4 +18,131 @@
 .feedback-item__textarea-label {
   .font-title();
   color: #000000;
+}
+
+.feedback-item__radio-input,
+.feedback-item__checkbox-input {
+  .visually-hidden();
+}
+
+.feedback-item__radio-label,
+.feedback-item__checkbox-label {
+  padding-left: 80px;
+}
+
+.feedback-item__textarea-input {
+  border: 0;
+  background-color: @bg-body;
+}
+
+.feedback-item__textarea-label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding-left: 20px;
+  padding-top: 15px;
+  cursor: text;
+}
+
+.feedback-item--name {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 280px;
+}
+
+.feedback-item--contacts .feedback-item__input {
+  width: 100%;
+  margin-bottom: 50px;
+}
+
+.feedback-item--contacts .feedback-item__label {
+  padding-left: 22px;
+}
+
+.feedback-item--radio,
+.feedback-item--checkbox {
+  margin-bottom: 35px;
+}
+
+.feedback-item--textarea {
+  position: relative;
+}
+
+@media @tablet-width {
+
+  .feedback-item--checkbox {
+    width: 50%;
+
+    &:first-child {
+      order: 1;
+    }
+
+    &:nth-child(2) {
+      order: 3;
+    }
+
+    &:nth-child(3) {
+      order: 2;
+    }
+
+    &:last-child {
+      order: 4;
+    }
+  }
+
+  .feedback-item__textarea-input {
+    padding: 0;
+    width: 648px;
+    height: 160px;
+  }
+
+  .feedback-item--submit {
+    order: 6;
+  }
+}
+
+@media @desktop-width {
+
+  .feedback-item--name {
+    width: 100%;
+  }
+
+  .feedback-item--name .feedback-item__input {
+    flex-grow: 7;
+  }
+
+   .feedback-item--name .feedback-item__label {
+    flex-grow: 1;
+    margin-left: 80px;
+    text-align: left;
+  }
+
+  .feedback-item--contacts {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50%;
+  }
+
+  .feedback-item--contacts .feedback-item__input,
+  .feedback-item--contacts .feedback-item__label {
+    margin-bottom: 0;
+  }
+
+  .feedback-item--contacts .feedback-item__input {
+    width: 315px;
+  }
+
+  .feedback-item--contacts .feedback-item__label {
+    padding-right: 16px;
+  }
+
+  .feedback-item__textarea-input {
+    width: 100%;
+  }
+
+  .feedback-item--submit {
+    width: 50%;
+  }
 }

@@ -5,3 +5,18 @@
 .feature-item--rest {
   background-color: @bg-grey;
 }
+
+@media @tablet-width {
+
+  .feature-item {
+    display: flex;
+  }
+
+  .feature-item--reverse {
+    flex-direction: row-reverse;
+  }
+
+  .feature-item--rest {
+    align-items: flex-start;
+  }
+}

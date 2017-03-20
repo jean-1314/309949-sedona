@@ -1,6 +1,12 @@
+.video {
+  position: relative;
+  padding-bottom: 80px;
+  text-align: center;
+}
+
 .video__heading {
   display: block;
-  padding-top: 30px;
+  padding-top: 70px;
   padding-bottom: 30px;
   .font-title();
   color: #000000;
@@ -18,4 +24,46 @@
   font-weight: normal;
   color: #333333;
   text-transform: uppercase;
+}
+
+@media @tablet-width {
+
+  .video {
+    padding-bottom: 0;
+  }
+
+  .video__item {
+    width: 648px;
+    .flex-column-center();
+  }
+
+  .video__item img {
+    width: 648px;
+    height: 500px;
+  }
+
+  .video__heading {
+    font-size: 30px;
+  }
+
+  .video__item figcaption {
+    width: 420px;
+  }
+}
+
+@media @desktop-width {
+  .video {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .video__item {
+    width: 800px;
+  }
+
+  .video__item img {
+    width: 800px;
+    height: 500px;
+  }
+
 }

@@ -1,5 +1,16 @@
 .feature-benefits {
+  display: flex;
+  flex-direction: column;
   padding-top: 30px;
   padding-bottom: 30px;
   background-color: @bg-white;
+}
+
+@media @tablet-width {
+
+  .feature-benefits {
+    flex-direction: row;
+    justify-content: space-around;
+    padding-top: 125px;
+  }
 }
