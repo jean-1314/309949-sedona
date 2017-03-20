@@ -45,7 +45,7 @@
     <main class="main-content main-content--rest">
       <div class="main-content__wrapper main-content__wrapper--rest">
 
-        <div class="main-image main-image--form">
+        <div class="main-image main-image--rest">
           <img class="main-image__caption main-image__caption--rest" src="http://placehold.it/280x214" alt="Sedona Caption" width="280" height="214">
         </div>
 
@@ -59,67 +59,62 @@
           <section class="feedback">
             <form id="feedback-form" class="feedback-form" action="https://echo.htmlacademy.ru/">
 
-              <fieldset class="feedback-form__name">
-                <legend class="feedback-form__title">Представьтесь:</legend>
-                <div class="feedback-flexbox-name">  <!--For correct flexbox layout-->
+              <div class="feedback-form__name">
+                <span class="feedback-form__title">Представьтесь:</span>
 
-                  <div class="feedback-item feedback-item--name">
-                    <label for="first-name" class="feedback-item__label">Имя*:</label>
-                    <input id="first-name" class="feedback-item__input" type="text" name="first-name" value="" required>
-                  </div>
-
-                  <div class="feedback-item feedback-item--name">
-                    <label for="last-name" class="feedback-item__label">Фамилия*:</label>
-                    <input id="last-name" class="feedback-item__input" type="text" name="last-name" value="" required>
-                  </div>
-
-                  <div class="feedback-item feedback-item--name">
-                    <label for="patronymic-name" class="feedback-item__label">Отчество:</label>
-                    <input id="patronymic-name" class="feedback-item__input" type="text" name="patronymic-name" value="">
-                  </div>
+                <div class="feedback-item feedback-item--name">
+                  <label for="first-name" class="feedback-item__label">Имя*:</label>
+                  <input id="first-name" class="feedback-item__input" type="text" name="first-name" value="" required>
                 </div>
-              </fieldset>
 
-              <fieldset class="feedback-form__contacts">
-                <legend class="feedback-form__title">Контактная информация:</legend>
-                <div class="feedback-flexbox-contacts">
-
-                  <div class="feedback-item feedback-item--contacts">
-                    <label for="phone" class="feedback-item__label">Контактный телефон*:</label>
-                    <input id="phone" class="feedback-item__input" type="tel" name="phone" value="" required>
-                  </div>
-
-                  <div class="feedback-item feedback-item--contacts">
-                    <label for="email" class="feedback-item__label">Электронная почта*:</label>
-                    <input id="email" class="feedback-item__input" type="email" name="email" value="" required>
-                  </div>
+                <div class="feedback-item feedback-item--name">
+                  <label for="last-name" class="feedback-item__label">Фамилия*:</label>
+                  <input id="last-name" class="feedback-item__input" type="text" name="last-name" value="" required>
                 </div>
-              </fieldset>
 
-              <fieldset class="feedback-form__radio">
-                <legend class="feedback-form__title">Ваше общее впечатление:</legend>
-                <div class="feedback-flexbox-radio">
-
-                  <div class="feedback-item feedback-item--radio">
-                    <input id="radio-good" class="feedback-item__radio-input" type="radio" name="impression" checked>
-                    <label for="radio-good" class="feedback-item__radio-label">Скорее положительное</label>
-                  </div>
-
-                  <div class="feedback-item feedback-item--radio">
-                    <input id="radio-bad" class="feedback-item__radio-input" type="radio" name="impression">
-                    <label for="radio-bad" class="feedback-item__radio-label">Скорее отрицательное</label>
-                  </div>
-
-                  <div class="feedback-item feedback-item--radio">
-                    <input id="radio-undecided" class="feedback-item__radio-input" type="radio" name="impression">
-                    <label for="radio-undecided" class="feedback-item__radio-label">Затрудняюсь ответить</label>
-                  </div>
+                <div class="feedback-item feedback-item--name">
+                  <label for="patronymic-name" class="feedback-item__label">Отчество:</label>
+                  <input id="patronymic-name" class="feedback-item__input" type="text" name="patronymic-name" value="">
                 </div>
-              </fieldset>
+              </div>
 
-              <fieldset class="feedback-form__checkbox">
-                <legend class="feedback-form__title">Посещённые достопримечательности:</legend>
-                <div class="feedback-flexbox-checkbox">
+              <div class="feedback-form__contacts">
+                <span class="feedback-form__title">Контактная информация:</span>
+
+                <div class="feedback-item feedback-item--contacts">
+                  <label for="phone" class="feedback-item__label">Контактный&nbsp;телефон*:</label>
+                  <input id="phone" class="feedback-item__input" type="tel" name="phone" value="" required>
+                </div>
+
+                <div class="feedback-item feedback-item--contacts">
+                  <label for="email" class="feedback-item__label">Электронная&nbsp;почта*:</label>
+                  <input id="email" class="feedback-item__input" type="email" name="email" value="" required>
+                </div>
+              </div>
+
+              <div class="feedback-form__radio">
+                <span class="feedback-form__title">Ваше общее впечатление:</span>
+
+                <div class="feedback-item feedback-item--radio">
+                  <input id="radio-good" class="feedback-item__radio-input" type="radio" name="impression" checked>
+                  <label for="radio-good" class="feedback-item__radio-label">Скорее положительное</label>
+                </div>
+
+                <div class="feedback-item feedback-item--radio">
+                  <input id="radio-bad" class="feedback-item__radio-input" type="radio" name="impression">
+                  <label for="radio-bad" class="feedback-item__radio-label">Скорее отрицательное</label>
+                </div>
+
+                <div class="feedback-item feedback-item--radio">
+                  <input id="radio-undecided" class="feedback-item__radio-input" type="radio" name="impression">
+                  <label for="radio-undecided" class="feedback-item__radio-label">Затрудняюсь ответить</label>
+                </div>
+              </div>
+
+              <div class="feedback-form__checkbox">
+                <span class="feedback-form__title">Посещённые достопримечательности:</span>
+
+                <div class="feedback-form__checkbox-container">
 
                   <div class="feedback-item feedback-item--checkbox">
                     <input id="devil-bridge" class="feedback-item__checkbox-input" type="checkbox" name="devil-bridge" checked>
@@ -141,20 +136,22 @@
                     <label for="red-rocks" class="feedback-item__checkbox-label">Красные скалы</label>
                   </div>
                 </div>
-              </fieldset>
+              </div>
 
-              <fieldset class="feedback-form__textarea">
-                <legend class="feedback-form__title">Опишите свои эмоции:</legend>
-                <div class="feedback-flexbox-textarea">
-                  <div class="feedback-item feedback-item--textarea">
-                    <textarea id="feedback-input-text" class="feedback-item__textarea-input" rows="9" cols="36" name="input-text" required></textarea>
-                    <label for="feedback-input-text" class="feedback-item__textarea-label">Опишите подробно все свои восторги</label>
-                  </div>
+              <div class="feedback-form__textarea">
+                <span class="feedback-form__title">Опишите свои эмоции:</span>
+                <div class="feedback-item feedback-item--textarea">
+                  <textarea id="feedback-input-text" class="feedback-item__textarea-input" rows="9" cols="36" name="input-text" required></textarea>
+                  <label for="feedback-input-text" class="feedback-item__textarea-label">Опишите подробно все свои восторги</label>
                 </div>
-              </fieldset>
+              </div>
 
-              <div class="feedback-item">
+              <div class="feedback-item feedback-item--submit">
                 <input class="btn btn-submit" type="submit" name="feedback-submit" value="Отправить отзыв">
+              </div>
+
+              <div class="feedback-form__warning">
+                <span class="feedback-form__warning-line">* – Обязательные поля</span>
               </div>
 
             </form>
@@ -168,7 +165,9 @@
             <section class="form-onsubmit">
               <h2 class="form-onsubmit__title">Ваш отзыв отправлен!</h2>
               <p class="form-onsubmit__info">Спасибо за ваше участие, ваш отзыв уже поступил к нам. В ближайшее время мы опубликуем его на сайте.</p>
-              <button class="btn btn-close" type="button">Закрыть окно</button>
+              <div class="form-onsubmit__btn-container">
+                <button class="btn btn-close" type="button">Закрыть окно</button>
+              </div>
             </section>
           </section>
         </div>
