@@ -17,8 +17,17 @@
   justify-content: center;
   align-items: center;
   min-height: 54px;
-
   list-style: none;
+  border-top: 1px solid #9ac2db;
+  border-bottom: 1px solid #678fa8;
+
+  &:first-child {
+    border-top: 1px solid @bg-lightblue;
+  }
+
+  &:last-child {
+    border-bottom: none;
+  }
 }
 
 .main-nav__link {
@@ -40,7 +49,7 @@
     flex-direction: row;
     justify-content: space-around;
     background-color: @bg-white;
-
+    border: none;
   }
 
   .main-nav__link {

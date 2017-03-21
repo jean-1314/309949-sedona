@@ -6,8 +6,8 @@
 
 .page-footer__hashtag {
   display: block;
-  padding-top: 60px;
-  padding-bottom: 40px;
+  padding-top: 35px;
+  padding-bottom: 35px;
   font-size: 21px;
   line-height: 26px;
   font-weight: bold;
@@ -16,8 +16,9 @@
 
 .page-footer__copyright {
   display: block;
-  padding-top: 60px;
+  padding-top: 44px;
   padding-bottom: 30px;
+  padding-right: 40px;
   .font-regular-grey();
   color: #000000;
   text-decoration: none;
@@ -26,6 +27,12 @@
 .page-footer__wrapper {
   .container();
   background-color: @bg-white;
+}
+
+.page-footer__social {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 @media @tablet-width {
