@@ -43,6 +43,23 @@
 
   .feature-benefit__caption {
     padding-top: 10px;
+  }
+}
 
+@media @desktop-width {
+
+  .feature-benefit {
+    width: 290px;
+
+    &:last-child {
+      width: 290px;
+    }
+  }
+
+  .feature-benefit:nth-child(2) .feature-benefit__caption {
+    display: flex;
+    justify-content: center;
+    width: 214px;
+    padding-left: 30px;
   }
 }
