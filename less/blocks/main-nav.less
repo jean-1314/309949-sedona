@@ -47,9 +47,30 @@
 
   .main-nav__items {
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: flex-start;
     background-color: @bg-white;
     border: none;
+  }
+
+  .main-nav__item {
+    border: 0;
+
+    &:first-child {
+      padding-left: 49px;
+      border: 0;
+    }
+
+    &:nth-child(2) {
+      margin-left: 77px;
+    }
+
+    &:nth-child(3) {
+      margin-left: 209px;
+    }
+
+    &:last-child {
+      margin-left: 49px;
+    }
   }
 
   .main-nav__link {

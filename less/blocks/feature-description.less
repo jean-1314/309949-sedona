@@ -75,19 +75,40 @@
 
   .feature-description {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     width: 256px;
+    min-height: 256px;
   }
 
   .feature-description__title,
   .feature-description__number,
   .feature-description__caption {
     width: 175px;
+    margin: 0;
+    padding: 0;
     text-align: center;
+  }
+
+  .feature-description__title {
+    padding-top: 45px;
+    font-size: 21px;
   }
 
   .feature-description__title--rest {
     width: 125px;
+  }
+
+  .feature-description__number {
+    padding-top: 10px;
+    margin-bottom: 21px;
+  }
+
+  .feature-description--second .feature-description__title  {
+    margin-top: 0;
+  }
+
+  .feature-description--rest::before {
+    display: none;
   }
 }
 
