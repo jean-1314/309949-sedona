@@ -18,6 +18,10 @@
   padding-bottom: 30px;
   .font-caption();
   color: #333333;
+
+  &--desktop {
+    display: none;
+  }
 }
 
 @media @tablet-width {
@@ -56,10 +60,21 @@
     }
   }
 
-  .feature-benefit:nth-child(2) .feature-benefit__caption {
-    display: flex;
+
+
+  .feature-benefit__caption {
+
+    &--rest {
+      .visually-hidden();
+    }
+
+    &--desktop {
+      display: flex;
     justify-content: center;
     width: 214px;
-    padding-left: 30px;
+    padding-left: 37px;
+    }
   }
 }
+
+

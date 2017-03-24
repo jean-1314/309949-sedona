@@ -46,6 +46,11 @@
   padding-bottom: 28px;
 }
 
+.feature-description__caption--rest-word,
+.feature-description__caption--desktop-word {
+  display: none;
+}
+
 .feature-description--rest {
   position: relative;
   min-height: 168px;
@@ -103,6 +108,15 @@
     margin-bottom: 21px;
   }
 
+  .feature-description__caption--rest-word {
+    display: inline;
+  }
+
+  .feature-description__caption--mobile-word,
+  .feature-description__caption--desktop-word {
+    display: none;
+  }
+
   .feature-description--second .feature-description__title  {
     margin-top: 0;
   }
@@ -133,4 +147,14 @@
   .feature-description__caption {
     width: 270px;
   }
+
+  .feature-description__caption--desktop-word {
+    display: inline;
+  }
+
+  .feature-description__caption--mobile-word,
+  .feature-description__caption--rest-word {
+    display: none;
+  }
+
 }
