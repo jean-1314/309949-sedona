@@ -36,7 +36,41 @@
 }
 
 .main-nav__toggle {
-  .visually-hidden();
+  position: absolute;
+  top: 240px;
+  right: 20px;
+  z-index: 2;
+  display: block;
+  width: 23px;
+  height: 21px;
+  font-size: 0;
+  background-color: @bg-white;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.main-nav--closed .main-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 23px;
+  height: 4px;
+  background-color: @bg-lightblue;
+  box-shadow: 0 17px 0 0 @bg-lightblue;
+}
+
+.main-nav--closed .main-nav__toggle::after {
+  content: "";
+  position: absolute;
+  top: 8px;
+  right: 0;
+  width: 23px;
+  height: 3px;
+  border-top: solid 1px #c0d9e8;
+  border-bottom: solid 1px #c0d9e8;
+  background-color: @bg-lightblue;
 }
 
 @media @tablet-width {

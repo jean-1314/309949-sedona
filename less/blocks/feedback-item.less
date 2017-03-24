@@ -104,6 +104,50 @@
   position: relative;
 }
 
+.feedback-item--radio input[type="radio"] + label {
+  position: relative;
+  cursor: pointer;
+}
+
+.feedback-item--radio input[type="radio"] + label::before {
+  position: absolute;
+  top: -15px;
+  left: 0;
+  content: "";
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background-color: #f2f2f2;
+}
+
+.feedback-item--radio input[type="radio"]:checked + label::after {
+  position: absolute;
+  content: "";
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  background-color: #333333;
+  top: 2px;
+  left: 18px;
+}
+
+.feedback-item--checkbox input[type="checkbox"] + label {
+  position: relative;
+  cursor: pointer;
+}
+
+.feedback-item--checkbox input[type="checkbox"] + label::before {
+  position: absolute;
+  left: -1px;
+  top: -15px;
+  content: "";
+  width: 56px;
+  height: 56px;
+  background-color: #f2f2f2;
+  border-radius: 5px;
+}
+
+
 @media @tablet-width {
 
   .feedback-item--checkbox {
@@ -126,6 +170,16 @@
     &:last-child {
       order: 4;
     }
+  }
+
+  .feedback-item--checkbox:first-child input[type="checkbox"] + label::before,
+  .feedback-item--checkbox:nth-child(2) input[type="checkbox"] + label::before {
+    left: 95px;
+  }
+
+  .feedback-item--checkbox:last-child input[type="checkbox"] + label::before,
+  .feedback-item--checkbox:nth-child(3) input[type="checkbox"] + label::before {
+    left: 30px;
   }
 
   .feedback-item__checkbox-label {
@@ -261,5 +315,29 @@
 
   .feedback-item__label--hidden {
     display: none;
+  }
+
+  .feedback-item--radio input[type="radio"] + label::before {
+    left: 4px;
+  }
+
+  .feedback-item--radio input[type="radio"]:checked + label::after {
+    left: 22px;
+  }
+
+  .feedback-item--checkbox:first-child input[type="checkbox"] + label::before {
+    left: 0;
+  }
+
+  .feedback-item--checkbox:nth-child(2) input[type="checkbox"] + label::before {
+    left: 35px;
+  }
+
+  .feedback-item--checkbox:nth-child(3) input[type="checkbox"] + label::before {
+    left: 20px;
+  }
+
+  .feedback-item--checkbox:last-child input[type="checkbox"] + label::before{
+    left: 35px;
   }
 }
