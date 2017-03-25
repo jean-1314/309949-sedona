@@ -1,9 +1,13 @@
 .main-image {
   display: flex;
   justify-content: center;
+  min-height: 389px;
   background-image: url("../img/bg-back-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+}
+
+.main-image--rest {
+  min-height: 158px;
 }
 
 @media @tablet-width {
@@ -13,5 +17,11 @@
 
   .main-image--rest {
     min-height: 290px;
+  }
+}
+
+@media @desktop-width {
+  .main-image--rest {
+    min-height: 301px;
   }
 }
