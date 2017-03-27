@@ -32,6 +32,19 @@
   color: #333333;
 }
 
+.photo__upvote {
+  position: relative;
+}
+
+.photo__upvote--icon {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 22px;
+    height: 24px;
+    opacity: 0.3;
+  }
+
 .photo__upvote-count {
   display: block;
   margin-top: 8px;
@@ -152,5 +165,10 @@
   .photo__title-author,
   .photo__upvote-count {
     color: #ffffff;
+  }
+
+  .photo__upvote--icon {
+    fill: @bg-white;
+    opacity: 1;
   }
 }

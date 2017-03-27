@@ -1,16 +1,42 @@
 .social-btn {
+  position: relative;
   display: block;
   width: 46px;
-  height: 48px;
+  height: 46px;
   margin-right: 6px;
+  border-top: 1px solid #8ab8d5;
+  border-bottom: 1px solid #8ab8d5;
   font-size: 0;
   background-color: @bg-lightblue;
 
   &:last-child {
     margin-right: 0;
   }
+
+  &:hover {
+    background-color: #669ec0;
+    border-top: 1px solid #71a5c4;
+    border-bottom: 1px solid #71a5c4;
+  }
+
+  &:active {
+    background-color: #5496bd;
+    border-top: 1px solid #609dc2;
+    border-bottom: 1px solid #609dc2;
+  }
 }
 
 .social-btn--fb {
   width: 47px;
+}
+
+.social-btn__icon {
+  position: absolute;
+  top: 30%;
+  left: 30%;
+  fill: @bg-white;
+}
+
+.social-btn:active .social-btn__icon {
+  fill: #88b6d1;
 }

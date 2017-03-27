@@ -5,6 +5,21 @@
   text-transform: uppercase;
 }
 
+.feature-description--first {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: -22px;
+    width: 320px;
+    height: 37px;
+    background-image: url("../img/bg-triangle.svg");
+    background-size: 320px 37px;
+  }
+}
+
 .feature-description--second {
   min-height: 191px;
 }
@@ -83,6 +98,10 @@
     justify-content: flex-start;
     width: 256px;
     min-height: 256px;
+  }
+
+  .feature-description--first::before {
+    display: none;
   }
 
   .feature-description__title,

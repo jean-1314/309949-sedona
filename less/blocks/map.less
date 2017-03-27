@@ -1,6 +1,79 @@
 .map {
-  height: 350px; /*временно*/
+  position: relative;
+  min-height: 350px;
   background-image: url("../img/bg-map-mobile@1x.jpg");
   background-repeat: no-repeat;
-  background-size: 100%;
+
+  &::before {
+    position: absolute;
+    top: 160px;
+    left: 146px;
+    content: "";
+    width: 27px;
+    height: 27px;
+    background-color: @bg-white;
+    border-radius: 50%;
+  }
+
+  &::after {
+    position: absolute;
+    top: 165px;
+    left: 151px;
+    content: "";
+    width: 17px;
+    height: 17px;
+    background-color: @bg-lightblue;
+    border-radius: 50%;
+  }
+
+  @media @retina {
+    background-image: url("../img/bg-map-mobile@2x.jpg");
+    background-size: 640px auto;
+  }
+}
+
+@media @tablet-width {
+
+  .map {
+    background-image: url("../img/bg-map-tablet@1x.jpg");
+    background-repeat: no-repeat;
+
+    &::before {
+      top: 163px;
+      left: 369px;
+    }
+
+    &::after {
+      top: 168px;
+      left: 374px;
+    }
+  }
+
+  @media @retina {
+    background-image: url("../img/bg-map-tablet@2x.jpg");
+    background-size: 1536px auto;
+  }
+}
+
+@media @desktop-width {
+
+  .map {
+    background-image: url("../img/bg-map-desktop@1x.jpg");
+    background-repeat: no-repeat;
+
+    &::before {
+      top: 163px;
+      left: 586px;
+    }
+
+    &::after {
+      top: 168px;
+      left: 591px;
+    }
+  }
+
+  @media @retina {
+    background-image: url("../img/bg-map-desktop@2x.jpg");
+    background-size: 2400px auto;
+  }
 }
