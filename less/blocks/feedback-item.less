@@ -9,9 +9,22 @@
   width: 100%;
   margin-bottom: 20px;
   padding: 0;
-  height: 58px;
-  border: 0;
+  padding-left: 18px;
+  height: 50px;
+  border: 4px solid @bg-body;
+  .font-title();
   background-color: @bg-body;
+
+  &:hover {
+    border: 4px solid #e5e5e5;
+    background-color: #e5e5e5;
+  }
+
+  &:focus {
+    border: solid 4px #e6e6e6;
+    background-color: @bg-white;
+    outline: none;
+  }
 }
 
 .feedback-item__radio-label,
@@ -33,10 +46,27 @@
 
 .feedback-item__textarea-input {
   border: 0;
-  padding: 0;
-  width: 277px;
-  min-height: 160px;
+  padding: 18px 0 0 18px;
+  border: 4px solid @bg-body;
+  width: 251px;
+  height: 134px;
+  .font-title();
   background-color: @bg-body;
+
+  &:hover {
+    border: 4px solid #e5e5e5;
+    background-color: #e5e5e5;
+  }
+
+  &:focus {
+    border: solid 4px #e6e6e6;
+    background-color: @bg-white;
+    outline: none;
+  }
+}
+
+.feedback-item__textarea-input:focus + .feedback-item__textarea-label {
+  display: none;
 }
 
 .feedback-item__textarea-label {
@@ -74,19 +104,40 @@
 
 .feedback-item--contacts .feedback-item__input {
   position: relative;
-  width: 100%;
-  height: 58px;
+  width: 254px;
+  height: 50px;
   margin: 0;
 }
 
 .feedback-item--contacts .feedback-item__label {
+  position: relative;
   display: block;
   margin-bottom: 6px;
   padding-left: 22px;
 }
 
+.feedback-item--contacts .feedback-item__label::before {
+  position: absolute;
+  top: 95px;
+  display: inline;
+  content: "Ошибка, перепроверьте номер";
+  font-size: 14px;
+  line-height: 26px;
+  color: #ff5c5c;
+  text-transform: none;
+}
+
 .feedback-item--contacts:last-child .feedback-item__label {
   padding-top: 43px;
+}
+
+.feedback-item--contacts:last-child .feedback-item__label::before {
+  position: absolute;
+  top: 135px;
+  display: inline;
+  z-index: 5;
+  content: "Ошибка, перепроверьте адрес";
+  color: #ff5c5c;
 }
 
 .feedback-item__icon--phone {
@@ -253,9 +304,9 @@
   }
 
   .feedback-item__textarea-input {
-    padding: 0;
-    width: 648px;
-    height: 160px;
+    padding: 18px 0 0 18px;
+    width: 622px;
+    min-height: 135px;
   }
 
   .feedback-item--submit {
@@ -296,6 +347,20 @@
     padding-top: 0;
   }
 
+  .feedback-item--contacts .feedback-item__input {
+    width: 622px;
+  }
+
+  .feedback-item--contacts .feedback-item__label::before {
+    top: 0;
+    right: 0;
+  }
+
+  .feedback-item--contacts:last-child .feedback-item__label::before {
+    top: 0;
+    right: 0;
+  }
+
   .feedback-item__icon--mail {
     top: 54px;
     right: 21px;
@@ -333,7 +398,7 @@
 
   .feedback-item--contacts:first-of-type {
     &::before {
-      right: 80px;
+      right: 78px;
     }
   }
 
@@ -343,12 +408,23 @@
   }
 
   .feedback-item--contacts .feedback-item__input {
-    width: 315px;
+    width: 291px;
   }
 
   .feedback-item--contacts .feedback-item__label {
     padding-right: 16px;
     padding-left: 0;
+  }
+
+  .feedback-item--contacts .feedback-item__label::before {
+    width: 200px;
+    top: -48px;
+    left: 107px;
+  }
+
+  .feedback-item--contacts:last-child .feedback-item__label::before {
+    top: -48px;
+    left: 185px;
   }
 
   .feedback-item__icon--phone {
@@ -381,7 +457,7 @@
   }
 
   .feedback-item__textarea-input {
-    width: 100%;
+    width: 934px;
   }
 
   .feedback-item--submit {
