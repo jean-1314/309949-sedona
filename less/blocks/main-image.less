@@ -43,6 +43,7 @@
 
 @media @tablet-width {
   .main-image {
+    display: block;
     min-height: 518px;
     background-image: url("../img/bg-back-tablet@1x.jpg");
 
@@ -68,15 +69,15 @@
   }
 
   .main-image__caption {
-    position: relative;
-    top: -7px;
-    align-self: center;
+    position: absolute;
+    top: 77px;
+    left: 153px;
     width: 462px;
     height: 350px;
   }
 
   .main-image__caption--rest {
-    top: -10px;
+    top: 95px;
     width: 458px;
     height: 78px;
   }
@@ -108,5 +109,13 @@
 
   .main-image--rest {
     min-height: 301px;
+  }
+
+  .main-image__caption {
+    left: 370px;
+  }
+
+  .main-image__caption--rest {
+    top: 102px;
   }
 }
