@@ -1,5 +1,6 @@
 .video {
   position: relative;
+  width: 320px;
   margin-bottom: 25px;
   padding-bottom: 80px;
   text-align: center;
@@ -40,6 +41,7 @@
 @media @tablet-width {
 
   .video {
+    width: 648px;
     padding-bottom: 0;
     margin-bottom: 40px;
 
@@ -50,7 +52,13 @@
 
   .video__item {
     width: 648px;
-    .flex-column-center();
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .video__item picture {
+    height: 500px;
   }
 
   .video__item img {
@@ -66,7 +74,7 @@
 
   .video__item figcaption {
     width: 420px;
-    margin-bottom: 75px;
+    margin-bottom: 73px;
   }
 }
 
@@ -74,7 +82,8 @@
   .video {
     display: flex;
     flex-direction: column;
-    margin-bottom: 83px;
+    width: 800px;
+    margin-bottom: 81px;
   }
 
   .video__item {

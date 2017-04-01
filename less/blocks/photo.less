@@ -18,6 +18,11 @@
   margin-top: 23px;
 }
 
+.photo__item img {
+  width: 280px;
+  height: 280px;
+}
+
 .photo__title-caption {
   display: block;
   margin-top: 12px;
@@ -25,12 +30,27 @@
   font-weight: bold;
   text-transform: uppercase;
   color: #000000;
+  overflow: hidden;
 }
 
 .photo__title-author {
   .font-regular();
   color: #333333;
+  overflow: hidden;
 }
+
+.photo__upvote {
+  position: relative;
+}
+
+.photo__upvote--icon {
+    position: absolute;
+    top: -2px;
+    left: 0;
+    width: 22px;
+    height: 24px;
+    opacity: 0.3;
+  }
 
 .photo__upvote-count {
   display: block;
@@ -152,5 +172,10 @@
   .photo__title-author,
   .photo__upvote-count {
     color: #ffffff;
+  }
+
+  .photo__upvote--icon {
+    fill: @bg-white;
+    opacity: 1;
   }
 }

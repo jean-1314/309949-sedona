@@ -1,7 +1,12 @@
+.feature-image {
+  display: block;
+  width: 320px;
+  height: 260px;
+}
+
 @media @tablet-width {
 
   .feature-image {
-    display: flex;
     width: 512px;
     height: 256px;
   }
@@ -10,6 +15,14 @@
 @media @desktop-width {
 
   .feature-image {
+    position: absolute;
+    bottom: -73px;
     width: 800px;
+    height: 400px;
+  }
+
+  .feature-image--reverse {
+    left: 0;
+    bottom: -68px;
   }
 }

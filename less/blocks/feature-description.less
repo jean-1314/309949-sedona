@@ -1,8 +1,26 @@
 .feature-description {
-  .flex-column-center();
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-height: 208px;
   color: #ffffff;
   text-transform: uppercase;
+  overflow: hidden;
+}
+
+.feature-description--first {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: -22px;
+    width: 320px;
+    height: 37px;
+    background-image: url("../img/bg-triangle.svg");
+    background-size: 320px 37px;
+  }
 }
 
 .feature-description--second {
@@ -58,6 +76,7 @@
 
   &::before {
     position: absolute;
+    left: 20px;
     bottom: 0;
     display: block;
     content: "";
@@ -83,6 +102,10 @@
     justify-content: flex-start;
     width: 256px;
     min-height: 256px;
+  }
+
+  .feature-description--first::before {
+    display: none;
   }
 
   .feature-description__title,

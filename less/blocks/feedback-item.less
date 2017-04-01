@@ -6,12 +6,24 @@
 }
 
 .feedback-item__input {
-  width: 100%;
   margin-bottom: 20px;
   padding: 0;
-  height: 58px;
-  border: 0;
+  padding-left: 18px;
+  height: 50px;
+  border: 4px solid @bg-body;
+  .font-title();
   background-color: @bg-body;
+
+  &:hover {
+    border: 4px solid #e5e5e5;
+    background-color: #e5e5e5;
+  }
+
+  &:focus {
+    border: solid 4px #e6e6e6;
+    background-color: @bg-white;
+    outline: none;
+  }
 }
 
 .feedback-item__radio-label,
@@ -33,10 +45,27 @@
 
 .feedback-item__textarea-input {
   border: 0;
-  padding: 0;
-  width: 277px;
-  min-height: 160px;
+  padding: 18px 0 0 18px;
+  border: 4px solid @bg-body;
+  width: 251px;
+  height: 134px;
+  .font-title();
   background-color: @bg-body;
+
+  &:hover {
+    border: 4px solid #e5e5e5;
+    background-color: #e5e5e5;
+  }
+
+  &:focus {
+    border: solid 4px #e6e6e6;
+    background-color: @bg-white;
+    outline: none;
+  }
+}
+
+.feedback-item__textarea-input:focus + .feedback-item__textarea-label {
+  display: none;
 }
 
 .feedback-item__textarea-label {
@@ -51,8 +80,19 @@
 .feedback-item--name {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
-  width: 280px;
+  justify-content: space-between;
+}
+
+.feedback-item--name input[name="first-name"] {
+  width: 204px;
+}
+
+.feedback-item--name input[name="last-name"] {
+  width: 166px;
+}
+
+.feedback-item--name input[name="patronymic-name"] {
+  width: 168px;
 }
 
 .feedback-item--contacts {
@@ -74,19 +114,54 @@
 
 .feedback-item--contacts .feedback-item__input {
   position: relative;
-  width: 100%;
-  height: 58px;
+  width: 254px;
+  height: 50px;
   margin: 0;
 }
 
 .feedback-item--contacts .feedback-item__label {
+  position: relative;
   display: block;
   margin-bottom: 6px;
   padding-left: 22px;
 }
 
+.feedback-item--contacts .feedback-item__label::before {
+  position: absolute;
+  top: 95px;
+  display: inline;
+  content: "Ошибка, перепроверьте номер";
+  font-size: 14px;
+  line-height: 26px;
+  color: #ff5c5c;
+  text-transform: none;
+}
+
 .feedback-item--contacts:last-child .feedback-item__label {
   padding-top: 43px;
+}
+
+.feedback-item--contacts:last-child .feedback-item__label::before {
+  position: absolute;
+  top: 135px;
+  display: inline;
+  z-index: 5;
+  content: "Ошибка, перепроверьте адрес";
+  color: #ff5c5c;
+}
+
+.feedback-item__icon--phone {
+  position: absolute;
+  top: 52px;
+  right: 19px;
+  z-index: 3;
+}
+
+.feedback-item__icon--mail {
+  position: absolute;
+  top: 96px;
+  right: 21px;
+  z-index: 3;
 }
 
 .feedback-item--radio,
@@ -120,6 +195,15 @@
   background-color: #f2f2f2;
 }
 
+.feedback-item--radio input[type="radio"]:hover + label::before {
+  background-color: #e5e5e5;
+}
+
+.feedback-item--radio input[type="radio"]:active + label::before {
+  background-color: #d5d5d5;
+  opacity: 0.3;
+}
+
 .feedback-item--radio input[type="radio"]:checked + label::after {
   position: absolute;
   content: "";
@@ -129,6 +213,10 @@
   background-color: #333333;
   top: 2px;
   left: 18px;
+}
+
+.feedback-item--radio input[type="radio"]:active + label::after {
+  opacity: 0.3;
 }
 
 .feedback-item--checkbox input[type="checkbox"] + label {
@@ -145,6 +233,30 @@
   height: 56px;
   background-color: #f2f2f2;
   border-radius: 5px;
+}
+
+.feedback-item--checkbox input[type="checkbox"]:hover + label::before {
+  background-color: #e5e5e5;
+}
+
+.feedback-item--checkbox input[type="checkbox"]:active + label::before {
+  background-color: #d5d5d5;
+}
+
+.feedback-item--checkbox input[type="checkbox"]:active + label::after {
+  opacity: 0.3;
+}
+
+.feedback-item--checkbox input[type="checkbox"]:checked + label::after {
+  position: absolute;
+  left: 17px;
+  top: 5px;
+  content: "";
+  width: 23px;
+  height: 16px;
+  background-image: url("../img/icon-tick.svg");
+  background-repeat: no-repeat;
+  background-size: 23px 16px;
 }
 
 
@@ -182,6 +294,16 @@
     left: 30px;
   }
 
+  .feedback-item--checkbox:first-child input[type="checkbox"]:checked + label::after,
+  .feedback-item--checkbox:nth-child(2) input[type="checkbox"]:checked + label::after {
+    left: 113px;
+  }
+
+  .feedback-item--checkbox:last-child input[type="checkbox"]:checked + label::after,
+  .feedback-item--checkbox:nth-child(3) input[type="checkbox"]:checked + label::after, {
+    left: 48px;
+  }
+
   .feedback-item__checkbox-label {
     padding-left: 175px;
   }
@@ -192,9 +314,9 @@
   }
 
   .feedback-item__textarea-input {
-    padding: 0;
-    width: 648px;
-    height: 160px;
+    padding: 18px 0 0 18px;
+    width: 622px;
+    min-height: 135px;
   }
 
   .feedback-item--submit {
@@ -219,6 +341,18 @@
     margin-bottom: 20px;
   }
 
+  .feedback-item--name input[name="first-name"] {
+    width: 189px;
+  }
+
+  .feedback-item--name input[name="last-name"] {
+    width: 152px;
+  }
+
+  .feedback-item--name input[name="patronymic-name"] {
+    width: 154px;
+  }
+
   .feedback-item--name .feedback-item__input {
     margin-bottom: 0;
   }
@@ -234,23 +368,58 @@
   .feedback-item--contacts:last-child .feedback-item__label {
     padding-top: 0;
   }
+
+  .feedback-item--contacts .feedback-item__input {
+    width: 622px;
+  }
+
+  .feedback-item--contacts .feedback-item__label::before {
+    top: 0;
+    right: 0;
+  }
+
+  .feedback-item--contacts:last-child .feedback-item__label::before {
+    top: 0;
+    right: 0;
+  }
+
+  .feedback-item__icon--mail {
+    top: 54px;
+    right: 21px;
+  }
 }
 
 @media @desktop-width {
 
   .feedback-item--name {
-    width: 100%;
+    display: block;
+    width: 480px;
     padding-left: 0;
   }
 
-  .feedback-item--name .feedback-item__input {
-    flex-grow: 7;
+  .feedback-item--name .feedback-item__label {
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 80px;
+    padding-right: 9px;
+    text-align: left;
   }
 
-  .feedback-item--name .feedback-item__label {
-    flex-grow: 1;
-    margin-left: 80px;
-    text-align: left;
+  .feedback-item--name .feedback-item__input {
+    display: inline-block;
+    vertical-align: middle;
+  }
+
+  .feedback-item--name input[name="first-name"] {
+    width: 324px;
+  }
+
+  .feedback-item--name input[name="last-name"] {
+    width: 286px;
+  }
+
+  .feedback-item--name input[name="patronymic-name"] {
+    width: 288px;
   }
 
   .feedback-item__radio-label {
@@ -267,7 +436,7 @@
 
   .feedback-item--contacts:first-of-type {
     &::before {
-      right: 80px;
+      right: 78px;
     }
   }
 
@@ -277,12 +446,32 @@
   }
 
   .feedback-item--contacts .feedback-item__input {
-    width: 315px;
+    width: 291px;
   }
 
   .feedback-item--contacts .feedback-item__label {
     padding-right: 16px;
     padding-left: 0;
+  }
+
+  .feedback-item--contacts .feedback-item__label::before {
+    width: 200px;
+    top: -48px;
+    left: 107px;
+  }
+
+  .feedback-item--contacts:last-child .feedback-item__label::before {
+    top: -48px;
+    left: 185px;
+  }
+
+  .feedback-item__icon--phone {
+    top: 20px;
+    right: 99px;
+  }
+
+  .feedback-item__icon--mail {
+    top: 22px;
   }
 
   .feedback-item--checkbox {
@@ -306,7 +495,7 @@
   }
 
   .feedback-item__textarea-input {
-    width: 100%;
+    width: 934px;
   }
 
   .feedback-item--submit {
@@ -339,5 +528,21 @@
 
   .feedback-item--checkbox:last-child input[type="checkbox"] + label::before{
     left: 35px;
+  }
+
+  .feedback-item--checkbox:first-child input[type="checkbox"]:checked + label::after {
+    left: 18px;
+  }
+
+  .feedback-item--checkbox:nth-child(2) input[type="checkbox"]:checked + label::after {
+    left: 53px;
+  }
+
+  .feedback-item--checkbox:nth-child(3) input[type="checkbox"]:checked + label::after {
+    left: 37px;
+  }
+
+  .feedback-item--checkbox:last-child input[type="checkbox"]:checked + label::after {
+    left: 53px;
   }
 }
